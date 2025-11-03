@@ -77,7 +77,7 @@ class ServicoClientes {
     }
 
     // Converte o DocumentSnapshot para um objeto Cliente.
-    return Cliente.fromFirestore(query.docs.first);
+    return Cliente.fromFirestore(query.docs.first as DocumentSnapshot<Map<String, dynamic>>);
   }
 
   /// Retorna um Stream dos clientes (para atualizar a UI em tempo real).
